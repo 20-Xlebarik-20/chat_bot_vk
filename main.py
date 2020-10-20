@@ -1,6 +1,8 @@
 import telebot
 from telebot import types
-bot = telebot.TeleBot('1227648472:AAH2nPNdMFNfSnYMdJGN6sw51tUE6iogU9I')
+
+atoken = '1227648472:AAH2nPNdMFNfSnYMdJGN6sw51tUE6iogU9I'
+bot = telebot.TeleBot(atoken)
 
 print("Start bot...")
 
@@ -19,10 +21,10 @@ def get_otvet(message):
 
 @bot.message_handler(content_types=['text'])
 
-#def poka(message):
- #   if message.text.lower() == 'пока':
-  #      bot.send_message(message.from_user, 'Прощай')
-   #     bot.send_sticker(message.chat_id, 'CAACAgIAAxkBAAPOX3xm683Nw6JS8MzMudjXx3WEcXYAAuEAA1KJkSM5wTa2R1-UzBsE')
+def poka(message):
+    if message.text == 'пока':
+        bot.send_message(message.from_user, 'Прощай')
+        bot.send_sticker(message.chat_id, 'CAACAgIAAxkBAAPOX3xm683Nw6JS8MzMudjXx3WEcXYAAuEAA1KJkSM5wTa2R1-UzBsE')
 
 
 def start(message):
